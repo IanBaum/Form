@@ -38,13 +38,25 @@ $(document).ready(function(){
   $("#blanks form").submit(function(event){
     event.preventDefault();
 
+    var drink = $("input:radio[name=drink]:checked").val();
+
+    var coding = $("#coding").val();
+
+    var birthday = $("#birthday").val();
+
     var favoriteColor = $("#color").val();
 
     var name = $("input#name").val();
 
+    $("#birthdayOut").text(birthday);
+
+    $("#drinkOut").text(drink);
+
+    $("#codingOut").text(coding);
+
     $(".letterName").text(name);
 
-    $("#letter p").css("color", favoriteColor);
+    $(".userData").css("color", favoriteColor);
 
     $("#letter").show();
   });

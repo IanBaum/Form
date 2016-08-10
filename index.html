@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>How healthy are you?</h1>
+      <h1>Job Application Form:</h1>
       <div class="row">
         <div id="blanks" class="col-sm-6">
           <form>
@@ -23,6 +23,48 @@
               <label for="color">What is your favorite color?</label>
               <input id="color" class="form-control" type="color">
             </div>
+            <div class="form-group">
+              <label for="birthday">When is your birthday?</label>
+              <input id="birthday" class="form-control" type="date">
+            </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="coding">What is your favorite coding language?</label>
+                  <select class="form-control" id="coding">
+                    <option selected disabled>Choose here:</option>
+                    <option>Javascript</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>PHP</option>
+                    <option>Drupal</option>
+                  </select>
+                </div>
+                <label>What do you drink when you code?</label>
+                <div class="col-sm-3">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="drink" value="coffee" checked>Coffee
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="drink" value="tea">Tea
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="drink" value="monster">Monster
+                    </label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="drink" value="other">Other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div><!-- end blanks -->
@@ -48,7 +90,8 @@
       </div><!-- end row -->
       <div id="letter">
         <p>Dear <span class="letterName"></span>,</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>We received your job application for the position of <span class="userData" id="codingOut"></span> programmer. We think you will fit in since everyone is required to drink <span class="userData" id="drinkOut"></span> all day here. You start on <span class="userData" id="birthdayOut"></span>. We look forward to seeing you then!
+        </p>
       </div>
     </div><!-- end container -->
   </body>
