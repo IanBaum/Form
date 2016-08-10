@@ -38,9 +38,13 @@ $(document).ready(function(){
   $("#blanks form").submit(function(event){
     event.preventDefault();
 
+    var favoriteColor = $("#color").val();
+
     var name = $("input#name").val();
 
     $(".letterName").text(name);
+
+    $("#letter p").css("color", favoriteColor);
 
     $("#letter").show();
   });
